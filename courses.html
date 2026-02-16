@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Pearson Edexcel iAL Maths | Ruvindra Silva</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',    /* Slate 900 */
+                        secondary: '#3b82f6',  /* Blue 500 */
+                        accent: '#fbbf24',     /* Amber 400 */
+                        surface: '#1e293b',    /* Slate 800 */
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.5);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card bg-primary/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-square-root-variable text-accent"></i>
+                        <span>Ruvindra<span class="text-secondary">Silva</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="courses.html"
+                            class="text-white hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 border-secondary">Courses</a>
+                        <a href="about.html"
+                            class="text-gray-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="contact.html"
+                            class="bg-secondary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-transform transform hover:scale-105">Contact
+                            Me</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-surface border-t border-gray-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="courses.html"
+                    class="text-white block px-3 py-2 rounded-md text-base font-medium bg-gray-900">Courses</a>
+                <a href="about.html" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Contact
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-b from-primary to-surface">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Courses</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">Comprehensive modules covering the entire Pearson Edexcel iAL
+            Mathematics syllabus.</p>
+    </header>
+
+    <!-- Courses Grid -->
+    <section class="py-12 bg-surface min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Filters (Simplified) -->
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+                <button
+                    class="px-6 py-2 rounded-full bg-secondary text-white text-sm font-semibold shadow-lg shadow-blue-500/30">All</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-primary border border-gray-700 text-gray-400 hover:text-white hover:border-white transition-colors text-sm font-semibold">Pure
+                    Maths</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-primary border border-gray-700 text-gray-400 hover:text-white hover:border-white transition-colors text-sm font-semibold">Mechanics</button>
+                <button
+                    class="px-6 py-2 rounded-full bg-primary border border-gray-700 text-gray-400 hover:text-white hover:border-white transition-colors text-sm font-semibold">Statistics</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Course Card P1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div
+                        class="h-40 bg-gradient-to-br from-blue-900 to-blue-600 relative p-6 flex items-center justify-center">
+                        <i
+                            class="fa-solid fa-calculator text-6xl text-white opacity-20 absolute top-4 right-4 transform group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-4xl font-bold text-white z-10">P1</h3>
+                        <span
+                            class="absolute bottom-4 left-6 text-xs text-blue-200 uppercase tracking-widest font-semibold">Pure
+                            Mathematics 1</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">The Foundation of A-Level Maths</h4>
+                        <p class="text-gray-400 text-sm mb-4">Master algebra, quadratics, and coordinate geometry.
+                            Essential for all math students.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Algebra
+                                & Functions</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Coordinate Geometry</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Trigonometry</li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-white">Rs. 3,500</span>
+                            <button
+                                class="bg-secondary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card P2 -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div
+                        class="h-40 bg-gradient-to-br from-blue-800 to-indigo-600 relative p-6 flex items-center justify-center">
+                        <i
+                            class="fa-solid fa-infinity text-6xl text-white opacity-20 absolute top-4 right-4 transform group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-4xl font-bold text-white z-10">P2</h3>
+                        <span
+                            class="absolute bottom-4 left-6 text-xs text-blue-200 uppercase tracking-widest font-semibold">Pure
+                            Mathematics 2</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Exponentials & Logarithms</h4>
+                        <p class="text-gray-400 text-sm mb-4">Dive deeper into calculus with differentiation and
+                            integration techniques.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Exponentials & Logarithms</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Binomial Expansion</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Sequences & Series</li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-white">Rs. 3,500</span>
+                            <button
+                                class="bg-secondary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card P3 -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div
+                        class="h-40 bg-gradient-to-br from-indigo-900 to-purple-800 relative p-6 flex items-center justify-center">
+                        <i
+                            class="fa-solid fa-superscript text-6xl text-white opacity-20 absolute top-4 right-4 transform group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-4xl font-bold text-white z-10">P3</h3>
+                        <span
+                            class="absolute bottom-4 left-6 text-xs text-indigo-200 uppercase tracking-widest font-semibold">Pure
+                            Mathematics 3</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Advanced Calculus</h4>
+                        <p class="text-gray-400 text-sm mb-4">Complex algebra, functions, trigonometry and advanced
+                            calculus methods.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Algebraic Fractions</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Trigonometric Identities</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Numerical Methods</li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-white">Rs. 4,000</span>
+                            <button
+                                class="bg-secondary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card P4 -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div
+                        class="h-40 bg-gradient-to-br from-purple-900 to-fuchsia-800 relative p-6 flex items-center justify-center">
+                        <i
+                            class="fa-solid fa-vector-square text-6xl text-white opacity-20 absolute top-4 right-4 transform group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-4xl font-bold text-white z-10">P4</h3>
+                        <span
+                            class="absolute bottom-4 left-6 text-xs text-purple-200 uppercase tracking-widest font-semibold">Pure
+                            Mathematics 4</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Vectors & Differential Equations</h4>
+                        <p class="text-gray-400 text-sm mb-4">The final hurdle of pure mathematics involving vectors and
+                            proof.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Vectors
+                            </li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Differential Equations</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Proofs
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-white">Rs. 4,000</span>
+                            <button
+                                class="bg-secondary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card M1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div
+                        class="h-40 bg-gradient-to-br from-orange-900 to-amber-600 relative p-6 flex items-center justify-center">
+                        <i
+                            class="fa-solid fa-car-crash text-6xl text-white opacity-20 absolute top-4 right-4 transform group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-4xl font-bold text-white z-10">M1</h3>
+                        <span
+                            class="absolute bottom-4 left-6 text-xs text-orange-200 uppercase tracking-widest font-semibold">Mechanics
+                            1</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Forces & Motion</h4>
+                        <p class="text-gray-400 text-sm mb-4">Understanding the physical world through mathematical
+                            modeling.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Kinematics</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Dynamics</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Moments
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-white">Rs. 3,500</span>
+                            <button
+                                class="bg-secondary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card S1 -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div
+                        class="h-40 bg-gradient-to-br from-teal-900 to-emerald-600 relative p-6 flex items-center justify-center">
+                        <i
+                            class="fa-solid fa-chart-column text-6xl text-white opacity-20 absolute top-4 right-4 transform group-hover:scale-110 transition-transform"></i>
+                        <h3 class="text-4xl font-bold text-white z-10">S1</h3>
+                        <span
+                            class="absolute bottom-4 left-6 text-xs text-teal-200 uppercase tracking-widest font-semibold">Statistics
+                            1</span>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Data & Probability</h4>
+                        <p class="text-gray-400 text-sm mb-4">Making sense of data through statistical analysis and
+                            probability.</p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Probability</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Correlation & Regression</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i>
+                                Discrete Random Variables</li>
+                        </ul>
+                        <div class="flex items-center justify-between mt-4">
+                            <span class="text-2xl font-bold text-white">Rs. 3,500</span>
+                            <button
+                                class="bg-secondary hover:bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold transition-colors">Enroll
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-square-root-variable text-accent"></i>
+                        <span>Ruvindra<span class="text-secondary">Silva</span></span>
+                    </a>
+                    <p class="text-gray-500 text-sm">Empowering students to achieve excellence in Pearson Edexcel iAL
+                        Mathematics.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Home</a></li>
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Courses</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">About</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Courses</h4>
+                    <ul class="space-y-2">
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Pure Mathematics
+                                (P1-P4)</a></li>
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Mechanics
+                                (M1-M3)</a></li>
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Statistics
+                                (S1-S3)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 text-sm flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot mt-1 text-secondary"></i>
+                            <span>Colombo, Sri Lanka</span>
+                        </li>
+                        <li class="text-gray-400 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            <span>+94 7X XXX XXXX</span>
+                        </li>
+                        <li class="text-gray-400 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                            <span>info@ruvindrasilva.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-sm">&copy; 2024 Ruvindra Silva. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

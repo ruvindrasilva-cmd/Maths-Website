@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Ruvindra Silva | Pearson Edexcel iAL Maths</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                        secondary: '#3b82f6',
+                        accent: '#fbbf24',
+                        surface: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-card bg-primary/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-square-root-variable text-accent"></i>
+                        <span>Ruvindra<span class="text-secondary">Silva</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html"
+                            class="text-gray-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="courses.html"
+                            class="text-gray-300 hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Courses</a>
+                        <a href="about.html"
+                            class="text-white hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors border-b-2 border-secondary">About</a>
+                        <a href="contact.html"
+                            class="bg-secondary hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-transform transform hover:scale-105">Contact
+                            Me</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                        aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-btn">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-surface border-t border-gray-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="courses.html"
+                    class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Courses</a>
+                <a href="about.html"
+                    class="text-white block px-3 py-2 rounded-md text-base font-medium bg-gray-900">About</a>
+                <a href="contact.html" class="text-accent block px-3 py-2 rounded-md text-base font-medium">Contact
+                    Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="pt-32 pb-12 px-4 sm:px-6 lg:px-8 text-center bg-gradient-to-b from-primary to-surface">
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Meet Your Instructor</h1>
+        <p class="text-lg text-gray-400 max-w-2xl mx-auto">Dedicated to transforming mathematical understanding and exam
+            performance.</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-12 bg-surface min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Image/Profile Placeholder -->
+                <div class="relative flex justify-center lg:justify-end">
+                    <div
+                        class="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-tr from-secondary to-accent p-1 shadow-2xl animate-pulse">
+                        <div
+                            class="w-full h-full rounded-full bg-primary flex items-center justify-center overflow-hidden relative">
+                            <!-- Using icon as placeholder if image fails or not provided -->
+                            <i class="fa-solid fa-user-graduate text-9xl text-gray-700"></i>
+                            <!-- If real image exists, uncomment below -->
+                            <!-- <img src="assets/ruvindra.jpg" alt="Ruvindra Silva" class="w-full h-full object-cover"> -->
+                        </div>
+                    </div>
+                    <!-- Decorative elements -->
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-secondary/20 rounded-full blur-2xl"></div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-accent/20 rounded-full blur-2xl"></div>
+                </div>
+
+                <!-- Bio -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-bold text-white">Ruvindra Silva</h2>
+                    <p class="text-accent font-semibold text-lg">Specialist in Pearson Edexcel iAL Mathematics</p>
+                    <div class="space-y-4 text-gray-400 leading-relaxed">
+                        <p>
+                            With over a decade of experience in teaching A-Level Mathematics, Ruvindra Silva has helped
+                            hundreds of students achieve top grades in their Edexcel iAL exams. His teaching methodology
+                            focuses on building a strong conceptual foundation while mastering the specific techniques
+                            required for exam success.
+                        </p>
+                        <p>
+                            Ruvindra believes that mathematics is not just about memorizing formulas, but about
+                            understanding the logic and beauty behind them. His classes are interactive, challenging,
+                            and designed to foster critical thinking skills that go beyond the classroom.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <i class="fa-solid fa-graduation-cap text-3xl text-secondary mb-2"></i>
+                            <h3 class="text-xl font-bold text-white">10+ Years</h3>
+                            <p class="text-xs text-gray-500">Teaching Experience</p>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <i class="fa-solid fa-users text-3xl text-accent mb-2"></i>
+                            <h3 class="text-xl font-bold text-white">500+</h3>
+                            <p class="text-xs text-gray-500">Successful Students</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Philosophy Section -->
+            <div class="mt-24">
+                <div class="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -mr-16 -mt-16">
+                    </div>
+                    <div class="relative z-10 text-center max-w-3xl mx-auto">
+                        <i class="fa-solid fa-quote-left text-4xl text-gray-600 mb-6"></i>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">"My goal is to make every student
+                            confident in their ability to solve complex problems, not just in exams, but in life."</h3>
+                        <p class="text-gray-400 font-medium">- Ruvindra Silva</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-square-root-variable text-accent"></i>
+                        <span>Ruvindra<span class="text-secondary">Silva</span></span>
+                    </a>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Home</a></li>
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Courses</a></li>
+                        <li><a href="about.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">About</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Courses</h4>
+                    <ul class="space-y-2">
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Pure Mathematics
+                                (P1-P4)</a></li>
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Mechanics
+                                (M1-M3)</a></li>
+                        <li><a href="courses.html"
+                                class="text-gray-400 hover:text-secondary text-sm transition-colors">Statistics
+                                (S1-S3)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400 text-sm flex items-start gap-2">
+                            <i class="fa-solid fa-location-dot mt-1 text-secondary"></i>
+                            <span>Colombo, Sri Lanka</span>
+                        </li>
+                        <li class="text-gray-400 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            <span>+94 7X XXX XXXX</span>
+                        </li>
+                        <li class="text-gray-400 text-sm flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                            <span>info@ruvindrasilva.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-sm">&copy; 2024 Ruvindra Silva. All rights reserved.</p>
+                <div class="flex space-x-6 text-sm text-gray-600">
+                    <a href="#" class="hover:text-gray-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
